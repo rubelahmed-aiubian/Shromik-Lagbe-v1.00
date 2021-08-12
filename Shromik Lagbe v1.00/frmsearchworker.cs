@@ -160,9 +160,9 @@ namespace Shromik_Lagbe_v1._00
             {
                 query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, ClientId as 'Assigned C.ID', Picture from WORKER WHERE Occupation LIKE '" + comboBox2.SelectedItem + "%'";
             }
-            else
+            else if(comboBox1.Text != "All Area" && comboBox2.Text != "Occupation")
             {
-                query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, ClientId as 'Assigned C.ID', Picture from WORKER WHERE ServiceArea LIKE '" + comboBox1.SelectedItem + "%' AND PaymentStatus LIKE '" + comboBox2.SelectedItem + "%'";
+                query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, ClientId as 'Assigned C.ID', Picture from WORKER WHERE ServiceArea LIKE '" + comboBox1.SelectedItem + "%' AND Occupation LIKE '" + comboBox2.SelectedItem + "%'";
             }
         }
 

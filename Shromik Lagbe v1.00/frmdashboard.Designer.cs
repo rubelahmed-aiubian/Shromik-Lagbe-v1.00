@@ -31,10 +31,14 @@ namespace Shromik_Lagbe_v1._00
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmdashboard));
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnexportclient = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.label10 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -45,18 +49,20 @@ namespace Shromik_Lagbe_v1._00
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblworkercount = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblclientcount = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblclientcount = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel5.SuspendLayout();
@@ -68,7 +74,7 @@ namespace Shromik_Lagbe_v1._00
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel8.Controls.Add(this.button6);
+            this.panel8.Controls.Add(this.btnexportclient);
             this.panel8.Controls.Add(this.pictureBox7);
             this.panel8.Controls.Add(this.label12);
             this.panel8.Location = new System.Drawing.Point(717, 22);
@@ -76,18 +82,19 @@ namespace Shromik_Lagbe_v1._00
             this.panel8.Size = new System.Drawing.Size(253, 144);
             this.panel8.TabIndex = 17;
             // 
-            // button6
+            // btnexportclient
             // 
-            this.button6.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(40, 112);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(172, 23);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Download report as csv files";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnexportclient.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnexportclient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnexportclient.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnexportclient.ForeColor = System.Drawing.Color.White;
+            this.btnexportclient.Location = new System.Drawing.Point(40, 112);
+            this.btnexportclient.Name = "btnexportclient";
+            this.btnexportclient.Size = new System.Drawing.Size(172, 23);
+            this.btnexportclient.TabIndex = 4;
+            this.btnexportclient.Text = "Download report as csv files";
+            this.btnexportclient.UseVisualStyleBackColor = true;
+            this.btnexportclient.Click += new System.EventHandler(this.btnexportclient_Click);
             // 
             // pictureBox7
             // 
@@ -114,6 +121,10 @@ namespace Shromik_Lagbe_v1._00
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Controls.Add(this.pictureBox2);
+            this.panel7.Controls.Add(this.label1);
+            this.panel7.Controls.Add(this.pictureBox1);
             this.panel7.Controls.Add(this.cartesianChart1);
             this.panel7.Controls.Add(this.label10);
             this.panel7.Location = new System.Drawing.Point(369, 205);
@@ -121,11 +132,55 @@ namespace Shromik_Lagbe_v1._00
             this.panel7.Size = new System.Drawing.Size(601, 274);
             this.panel7.TabIndex = 16;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(545, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Client";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(524, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(471, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Worker";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(450, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // cartesianChart1
             // 
-            this.cartesianChart1.Location = new System.Drawing.Point(19, 53);
+            this.cartesianChart1.Location = new System.Drawing.Point(19, 47);
             this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(565, 218);
+            this.cartesianChart1.Size = new System.Drawing.Size(565, 224);
             this.cartesianChart1.TabIndex = 1;
             this.cartesianChart1.Text = "cartesianChart1";
             // 
@@ -135,7 +190,7 @@ namespace Shromik_Lagbe_v1._00
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(15, 13);
+            this.label10.Location = new System.Drawing.Point(15, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(95, 21);
             this.label10.TabIndex = 0;
@@ -229,14 +284,27 @@ namespace Shromik_Lagbe_v1._00
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel5.Controls.Add(this.lblworkercount);
             this.panel5.Controls.Add(this.pictureBox4);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.textBox3);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Location = new System.Drawing.Point(369, 22);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(299, 144);
             this.panel5.TabIndex = 14;
+            // 
+            // lblworkercount
+            // 
+            this.lblworkercount.AutoSize = true;
+            this.lblworkercount.BackColor = System.Drawing.Color.Transparent;
+            this.lblworkercount.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.lblworkercount.ForeColor = System.Drawing.Color.SpringGreen;
+            this.lblworkercount.Location = new System.Drawing.Point(131, 53);
+            this.lblworkercount.Name = "lblworkercount";
+            this.lblworkercount.Size = new System.Drawing.Size(36, 39);
+            this.lblworkercount.TabIndex = 5;
+            this.lblworkercount.Text = "0";
+            this.lblworkercount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox4
             // 
@@ -254,24 +322,11 @@ namespace Shromik_Lagbe_v1._00
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(45, 112);
+            this.label5.Location = new System.Drawing.Point(35, 112);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 16);
+            this.label5.Size = new System.Drawing.Size(234, 16);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Total registered worker in last 30 days.";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.SpringGreen;
-            this.textBox3.Location = new System.Drawing.Point(73, 57);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 40);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.Text = "2200";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label5.Text = "Total registered worker with Shromik Lagbe";
             // 
             // label6
             // 
@@ -296,6 +351,19 @@ namespace Shromik_Lagbe_v1._00
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(299, 144);
             this.panel4.TabIndex = 13;
+            // 
+            // lblclientcount
+            // 
+            this.lblclientcount.AutoSize = true;
+            this.lblclientcount.BackColor = System.Drawing.Color.Transparent;
+            this.lblclientcount.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.lblclientcount.ForeColor = System.Drawing.Color.SpringGreen;
+            this.lblclientcount.Location = new System.Drawing.Point(105, 57);
+            this.lblclientcount.Name = "lblclientcount";
+            this.lblclientcount.Size = new System.Drawing.Size(36, 39);
+            this.lblclientcount.TabIndex = 4;
+            this.lblclientcount.Text = "0";
+            this.lblclientcount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox3
             // 
@@ -331,19 +399,6 @@ namespace Shromik_Lagbe_v1._00
             this.label3.TabIndex = 0;
             this.label3.Text = "Total Customers";
             // 
-            // lblclientcount
-            // 
-            this.lblclientcount.AutoSize = true;
-            this.lblclientcount.BackColor = System.Drawing.Color.Transparent;
-            this.lblclientcount.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.lblclientcount.ForeColor = System.Drawing.Color.SpringGreen;
-            this.lblclientcount.Location = new System.Drawing.Point(105, 57);
-            this.lblclientcount.Name = "lblclientcount";
-            this.lblclientcount.Size = new System.Drawing.Size(36, 39);
-            this.lblclientcount.TabIndex = 4;
-            this.lblclientcount.Text = "0";
-            this.lblclientcount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmdashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,6 +418,8 @@ namespace Shromik_Lagbe_v1._00
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -379,7 +436,7 @@ namespace Shromik_Lagbe_v1._00
         #endregion
 
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnexportclient;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel7;
@@ -395,12 +452,16 @@ namespace Shromik_Lagbe_v1._00
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblclientcount;
+        private System.Windows.Forms.Label lblworkercount;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

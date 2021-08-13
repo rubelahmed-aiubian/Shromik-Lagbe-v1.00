@@ -83,16 +83,35 @@ namespace Shromik_Lagbe_v1._00
             });
         }
 
+        //export function
+        //client report download
         private void btnexportclient_Click(object sender, EventArgs e)
         {
             exportclientdata();
         }
 
-        //export function
-
         private void exportclientdata()
         {
-            
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "CSV Files (*.csv)|*.csv", ValidateNames = true })
+            {
+                if(sfd.ShowDialog() == DialogResult.OK)
+                {
+                    //
+                }
+            }
+        }
+
+
+        //worker report
+        private void btnworkerexport_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "CSV Files (*.csv)|*.csv", ValidateNames = true })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    //
+                }
+            }
         }
     }
 }

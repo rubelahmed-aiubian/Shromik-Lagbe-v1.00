@@ -61,7 +61,7 @@ namespace Shromik_Lagbe_v1._00
         //button update
 
         int passid = 0;
-        private void dataGridViewClient_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        private void dataGridViewClient_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             passid = Int32.Parse(dataGridViewClient.SelectedRows[0].Cells[0].Value.ToString());
         }

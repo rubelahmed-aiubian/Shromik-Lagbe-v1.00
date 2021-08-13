@@ -58,6 +58,8 @@ namespace Shromik_Lagbe_v1._00
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnworkerexport = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel7.SuspendLayout();
@@ -74,6 +76,8 @@ namespace Shromik_Lagbe_v1._00
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel8.Controls.Add(this.label11);
+            this.panel8.Controls.Add(this.btnworkerexport);
             this.panel8.Controls.Add(this.btnexportclient);
             this.panel8.Controls.Add(this.pictureBox7);
             this.panel8.Controls.Add(this.label12);
@@ -85,21 +89,23 @@ namespace Shromik_Lagbe_v1._00
             // btnexportclient
             // 
             this.btnexportclient.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnexportclient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnexportclient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnexportclient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnexportclient.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnexportclient.ForeColor = System.Drawing.Color.White;
-            this.btnexportclient.Location = new System.Drawing.Point(40, 112);
+            this.btnexportclient.Location = new System.Drawing.Point(92, 48);
             this.btnexportclient.Name = "btnexportclient";
-            this.btnexportclient.Size = new System.Drawing.Size(172, 23);
+            this.btnexportclient.Size = new System.Drawing.Size(59, 23);
             this.btnexportclient.TabIndex = 4;
-            this.btnexportclient.Text = "Download report as csv files";
+            this.btnexportclient.Text = "CLIENT";
             this.btnexportclient.UseVisualStyleBackColor = true;
             this.btnexportclient.Click += new System.EventHandler(this.btnexportclient_Click);
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(97, 47);
+            this.pictureBox7.Location = new System.Drawing.Point(186, 47);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(50, 50);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -322,7 +328,7 @@ namespace Shromik_Lagbe_v1._00
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(35, 112);
+            this.label5.Location = new System.Drawing.Point(35, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(234, 16);
             this.label5.TabIndex = 2;
@@ -381,7 +387,7 @@ namespace Shromik_Lagbe_v1._00
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(31, 112);
+            this.label4.Location = new System.Drawing.Point(31, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(232, 16);
             this.label4.TabIndex = 2;
@@ -398,6 +404,34 @@ namespace Shromik_Lagbe_v1._00
             this.label3.Size = new System.Drawing.Size(135, 21);
             this.label3.TabIndex = 0;
             this.label3.Text = "Total Customers";
+            // 
+            // btnworkerexport
+            // 
+            this.btnworkerexport.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnworkerexport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
+            this.btnworkerexport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnworkerexport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnworkerexport.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnworkerexport.ForeColor = System.Drawing.Color.White;
+            this.btnworkerexport.Location = new System.Drawing.Point(92, 86);
+            this.btnworkerexport.Name = "btnworkerexport";
+            this.btnworkerexport.Size = new System.Drawing.Size(59, 23);
+            this.btnworkerexport.TabIndex = 5;
+            this.btnworkerexport.Text = "WORKER";
+            this.btnworkerexport.UseVisualStyleBackColor = true;
+            this.btnworkerexport.Click += new System.EventHandler(this.btnworkerexport_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(40, 122);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(179, 16);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Download report as CSV (*.csv)";
             // 
             // frmdashboard
             // 
@@ -463,5 +497,7 @@ namespace Shromik_Lagbe_v1._00
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnworkerexport;
     }
 }

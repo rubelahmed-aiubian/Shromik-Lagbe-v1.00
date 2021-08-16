@@ -108,6 +108,10 @@ namespace Shromik_Lagbe_v1._00
                         btnclientsave.Visible = true;
                         label12.Visible = false;
                     }
+                    else
+                    {
+                        MessageBox.Show("Please enter an vaild email address", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {

@@ -133,7 +133,7 @@ namespace Shromik_Lagbe_v1._00
 
         private void btnsavechanges_Click(object sender, EventArgs e)
         {
-            DialogResult yesno = MessageBox.Show("Do you want to delete this client?", "Confirmation", MessageBoxButtons.YesNo);
+            DialogResult yesno = MessageBox.Show("Do you want to save changes?", "Confirmation", MessageBoxButtons.YesNo);
 
             if (yesno == DialogResult.Yes)
             {

@@ -89,7 +89,7 @@ namespace Shromik_Lagbe_v1._00
         {
             if (passid > 0)
             {
-                DialogResult yesno = MessageBox.Show("Do you want to save changes?", "Confirmation", MessageBoxButtons.YesNo);
+                DialogResult yesno = MessageBox.Show("Do you want to delete this client?", "Confirmation", MessageBoxButtons.YesNo);
 
                 if (yesno == DialogResult.Yes)
                 {

@@ -16,7 +16,7 @@ namespace Shromik_Lagbe_v1._00
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmmaindashboard());
+            Application.Run(new frmloading());
         }
     }
 }

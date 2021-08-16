@@ -26,7 +26,7 @@ namespace Shromik_Lagbe_v1._00
         {
             startPoint += 1;
             progressBar1.Value = startPoint;
-            if (progressBar1.Value == 50)
+            if (progressBar1.Value == 100)
             {
                 try
                 {

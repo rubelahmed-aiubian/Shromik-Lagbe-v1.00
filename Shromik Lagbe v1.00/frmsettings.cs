@@ -56,9 +56,7 @@ namespace Shromik_Lagbe_v1._00
                     if (res > 0)
                     {
                         MessageBox.Show("Your account has been deleted", "Delete Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        frmsignin sign = new frmsignin();
-                        sign.Show();
+                        Application.Exit();
                     }
                     else
                     {

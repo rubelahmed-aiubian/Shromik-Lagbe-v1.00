@@ -44,6 +44,7 @@ namespace Shromik_Lagbe_v1._00
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.label10 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -59,7 +60,6 @@ namespace Shromik_Lagbe_v1._00
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel7.SuspendLayout();
@@ -244,6 +244,20 @@ namespace Shromik_Lagbe_v1._00
             this.panel6.Size = new System.Drawing.Size(299, 274);
             this.panel6.TabIndex = 15;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.label14.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label14.Location = new System.Drawing.Point(117, 124);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(55, 39);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "00";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -419,20 +433,6 @@ namespace Shromik_Lagbe_v1._00
             this.label3.Size = new System.Drawing.Size(135, 21);
             this.label3.TabIndex = 0;
             this.label3.Text = "Total Customers";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.label14.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label14.Location = new System.Drawing.Point(117, 124);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(55, 39);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "00";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmdashboard
             // 

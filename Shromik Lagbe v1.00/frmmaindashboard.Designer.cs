@@ -246,6 +246,7 @@ namespace Shromik_Lagbe_v1._00
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(970, 4);
             this.pictureBox6.Name = "pictureBox6";
@@ -270,9 +271,11 @@ namespace Shromik_Lagbe_v1._00
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.lbltitle);
             this.panel4.Controls.Add(this.pictureBox6);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(190, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(994, 45);

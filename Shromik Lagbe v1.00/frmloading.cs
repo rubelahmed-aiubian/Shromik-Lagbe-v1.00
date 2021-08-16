@@ -31,17 +31,18 @@ namespace Shromik_Lagbe_v1._00
                 try
                 {
                     SqlConnection con = new SqlConnection(db);
-                    string query = "SELECT * FROM LOGIN";
+                    string query = "SELECT COUNT(*) FROM LOGIN";
                     SqlCommand cmd = new SqlCommand(query, con);
 
                     con.Open();
 
                     int result = cmd.ExecuteNonQuery();
 
-                    if (result > 0)
+                    if (result >=0)
                     {
                         progressBar1.Value = 0;
                         timer1.Stop();
+
                         frmsignin signin = new frmsignin();
                         this.Hide();
                         signin.Show();

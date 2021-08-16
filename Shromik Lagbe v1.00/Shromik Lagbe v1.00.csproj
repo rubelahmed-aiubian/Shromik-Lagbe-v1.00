@@ -72,6 +72,12 @@
     <Compile Include="frmaddclinet.designer.cs">
       <DependentUpon>frmaddclinet.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmadmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmadmin.Designer.cs">
+      <DependentUpon>frmadmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmdashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,8 +158,16 @@
     <Compile Include="frmupdateclient.designer.cs">
       <DependentUpon>frmupdateclient.cs</DependentUpon>
     </Compile>
+    <Compile Include="SHROMIK_LAGBEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SHROMIK_LAGBEDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmaddclinet.resx">
       <DependentUpon>frmaddclinet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmadmin.resx">
+      <DependentUpon>frmadmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmdashboard.resx">
       <DependentUpon>frmdashboard.cs</DependentUpon>
@@ -213,6 +227,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SHROMIK_LAGBEDataSet.xsc">
+      <DependentUpon>SHROMIK_LAGBEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SHROMIK_LAGBEDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SHROMIK_LAGBEDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SHROMIK_LAGBEDataSet.xss">
+      <DependentUpon>SHROMIK_LAGBEDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

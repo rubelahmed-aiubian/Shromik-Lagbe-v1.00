@@ -16,14 +16,18 @@ namespace Shromik_Lagbe_v1._00
     public partial class frmdashboard : Form
     {
         string db = ConfigurationManager.ConnectionStrings["shromik"].ConnectionString;
-        double clinetrows;
-        double workerrows;
+        double clinetrows = 0;
+        double workerrows = 0;
+        double paidClient=0;
+        double paidWorker=0;
+        double costperhour = 500;
         public frmdashboard()
         {
             InitializeComponent();
             clientrowscount();
             workerrowscount();
             livegraph();
+            totalearnings();
         }
 
         //client count
@@ -46,7 +50,8 @@ namespace Shromik_Lagbe_v1._00
             {
                 MessageBox.Show("Something is not right.", "Error occured", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-        }        
+        } 
+        
         //worker rows count
         private void workerrowscount()
         {
@@ -68,6 +73,49 @@ namespace Shromik_Lagbe_v1._00
             }
         }
 
+        //total earnings
+
+        private void totalearnings()
+        {
+
+            try
+            {
+                SqlConnection con = new SqlConnection(db);
+                string query = "SELECT COUNT(*) FROM CLIENT WHERE PaymentStatus = 'PAID'";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                con.Open();
+                paidClient = Convert.ToDouble(cmd.ExecuteScalar());
+                con.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something is not right.", "Error occured", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+
+            try
+            {
+                SqlConnection con = new SqlConnection(db);
+                string query = "SELECT COUNT(*) FROM WORKER WHERE PaymentStatus = 'PAID'";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                con.Open();
+                paidWorker = Convert.ToDouble(cmd.ExecuteScalar());
+                con.Close();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something is not right.", "Error occured", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+
+            double earnings = (0.05 * ((paidClient * costperhour) - (paidWorker * costperhour)));
+
+
+            label14.Text = earnings.ToString()+" Tk";
+        }
+
+
         //live graph
 
         private void livegraph()
@@ -87,22 +135,16 @@ namespace Shromik_Lagbe_v1._00
         //client report download
         private void btnexportclient_Click(object sender, EventArgs e)
         {
-            exportclientdata();
-        }
-
-        private void exportclientdata()
-        {
             using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "CSV Files (*.csv)|*.csv", ValidateNames = true })
             {
-                if(sfd.ShowDialog() == DialogResult.OK)
+                if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     //
                 }
             }
         }
 
-
-        //worker report
+        //worker report download
         private void btnworkerexport_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "CSV Files (*.csv)|*.csv", ValidateNames = true })

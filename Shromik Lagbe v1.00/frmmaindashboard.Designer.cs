@@ -39,8 +39,8 @@ namespace Shromik_Lagbe_v1._00
             this.btndashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.username = new System.Windows.Forms.Label();
+            this.adminphoto = new System.Windows.Forms.PictureBox();
             this.pnlmainform = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lbltitle = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@ namespace Shromik_Lagbe_v1._00
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminphoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -191,8 +191,8 @@ namespace Shromik_Lagbe_v1._00
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.username);
+            this.panel2.Controls.Add(this.adminphoto);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -203,38 +203,38 @@ namespace Shromik_Lagbe_v1._00
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(83, 88);
+            this.pictureBox2.Location = new System.Drawing.Point(77, 91);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // label1
+            // username
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(41, 65);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "SHROMIK LAGBE";
+            this.username.AutoSize = true;
+            this.username.BackColor = System.Drawing.Color.Transparent;
+            this.username.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.ForeColor = System.Drawing.Color.White;
+            this.username.Location = new System.Drawing.Point(55, 73);
+            this.username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(71, 17);
+            this.username.TabIndex = 1;
+            this.username.Text = "username";
             // 
-            // pictureBox1
+            // adminphoto
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(72, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.adminphoto.Image = ((System.Drawing.Image)(resources.GetObject("adminphoto.Image")));
+            this.adminphoto.Location = new System.Drawing.Point(58, 7);
+            this.adminphoto.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.adminphoto.Name = "adminphoto";
+            this.adminphoto.Size = new System.Drawing.Size(63, 63);
+            this.adminphoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.adminphoto.TabIndex = 0;
+            this.adminphoto.TabStop = false;
             // 
             // pnlmainform
             // 
@@ -296,7 +296,7 @@ namespace Shromik_Lagbe_v1._00
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminphoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -315,8 +315,8 @@ namespace Shromik_Lagbe_v1._00
         private System.Windows.Forms.Button btndashboard;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label username;
+        private System.Windows.Forms.PictureBox adminphoto;
         private System.Windows.Forms.Panel pnlmainform;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label lbltitle;

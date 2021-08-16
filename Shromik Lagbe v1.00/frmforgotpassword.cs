@@ -79,7 +79,7 @@ namespace Shromik_Lagbe_v1._00
                 try
                 {
                     SqlConnection con = new SqlConnection(db);
-                    string query = "update LOGIN set password = @pass where username = @user";
+                    string query = "update LOGIN set Password = @pass where UserName = @user";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@pass", textBox2.Text);
                     cmd.Parameters.AddWithValue("@user", textBox1.Text);

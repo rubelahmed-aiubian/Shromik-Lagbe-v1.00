@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace Shromik_Lagbe_v1._00
 {
     public partial class frmmaindashboard : Form
     {
+        string db = ConfigurationManager.ConnectionStrings["shromik"].ConnectionString;
         public frmmaindashboard()
         {
             InitializeComponent();
+            admininfo();
 
             //dashboard initialize
             lbltitle.Text = "Dashboard";
@@ -29,6 +34,36 @@ namespace Shromik_Lagbe_v1._00
             btnpayment.BackColor = Color.FromArgb(20, 31, 46);
             btnsettings.BackColor = Color.MediumSeaGreen;
 
+        }
+
+        //admin photo and username
+        private void admininfo()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(db);
+                string query = "SELECT UserName,Picture FROM LOGIN";
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                SqlDataReader da = cmd.ExecuteReader();
+
+                while (da.Read())
+                {
+                    username.Text = da.GetValue(0).ToString();
+
+                    //image
+                    byte[] img = (byte[])(da["Picture"]);
+                    MemoryStream mstream = new MemoryStream(img);
+                    adminphoto.Image = System.Drawing.Image.FromStream(mstream);
+                }
+
+
+                con.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Data is not loaded sucessfully.", "Conncetion Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //btn dashboard

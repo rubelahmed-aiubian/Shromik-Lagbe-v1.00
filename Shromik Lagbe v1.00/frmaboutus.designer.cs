@@ -203,7 +203,7 @@ namespace Shromik_Lagbe_v1._00
             this.label10.Size = new System.Drawing.Size(91, 16);
             this.label10.TabIndex = 6;
             this.label10.Text = "www.aiub.edu";
-            this.label10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label10_clicked);
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // panel2
             // 

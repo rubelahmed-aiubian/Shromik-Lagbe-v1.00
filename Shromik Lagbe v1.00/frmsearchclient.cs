@@ -262,7 +262,7 @@ namespace Shromik_Lagbe_v1._00
             {
                 SqlConnection con = new SqlConnection(db);
 
-                query = "select ClientId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Email, PhoneNumber, FullAddress, ServiceArea, WorkerId as 'Assigned W.ID', Picture from CLIENT WHERE FirstName LIKE '" + searchbox.Text + "%' OR LastName LIKE '"+searchbox.Text+"%'";
+                query = "select ClientId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Email, PhoneNumber, FullAddress, ServiceArea, WorkerId as 'Assigned W.ID', Picture from CLIENT WHERE FirstName LIKE '" +searchbox.Text+"%' OR LastName LIKE '"+searchbox.Text+"%'";
 
                 SqlDataAdapter readData = new SqlDataAdapter(query, con);
 

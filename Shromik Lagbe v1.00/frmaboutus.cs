@@ -35,7 +35,7 @@ namespace Shromik_Lagbe_v1._00
 
         }
 
-        private void label10_clicked(object sender, MouseEventArgs e)
+        private void label10_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("www.aiub.edu");
         }
@@ -49,5 +49,7 @@ namespace Shromik_Lagbe_v1._00
         {
             Application.Exit();
         }
+
+
     }
 }

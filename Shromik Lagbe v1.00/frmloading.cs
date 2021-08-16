@@ -38,7 +38,7 @@ namespace Shromik_Lagbe_v1._00
 
                     int result = cmd.ExecuteNonQuery();
 
-                    if (result >=0)
+                    if (result > 0)
                     {
                         progressBar1.Value = 0;
                         timer1.Stop();

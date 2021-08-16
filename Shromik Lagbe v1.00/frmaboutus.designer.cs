@@ -52,6 +52,10 @@ namespace Shromik_Lagbe_v1._00
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.aboutUs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -250,22 +254,22 @@ namespace Shromik_Lagbe_v1._00
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(494, 391);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(127, 17);
+            this.label12.Size = new System.Drawing.Size(129, 16);
             this.label12.TabIndex = 14;
             this.label12.Text = "Ahmed, Md. Rubel";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(519, 411);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 17);
+            this.label13.Size = new System.Drawing.Size(74, 16);
             this.label13.TabIndex = 15;
             this.label13.Text = "17-34871-2";
             // 
@@ -298,12 +302,60 @@ namespace Shromik_Lagbe_v1._00
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_2);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(661, 411);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(74, 16);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "17-34575-2";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(636, 391);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(141, 16);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "SHEIKH FAISAL ALAM";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(813, 409);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(74, 16);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "19-39702-1";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(802, 388);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(97, 16);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "SREJON SAHA";
+            // 
             // frmaboutus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(919, 491);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -364,5 +416,9 @@ namespace Shromik_Lagbe_v1._00
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }

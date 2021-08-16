@@ -25,28 +25,25 @@ namespace Shromik_Lagbe_v1._00
         //load data
         private void loadData()
         {
-            //connect database
-            SqlConnection con = new SqlConnection(db);
-            string query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, ClientId as 'Assigned C.ID', Picture from WORKER";
-            SqlDataAdapter readData = new SqlDataAdapter(query, con);
-
-            //load data
-
-            DataTable data = new DataTable();
-            readData.Fill(data);
-            dataGridViewworker.DataSource = data;
-
-            //image column
-            DataGridViewImageColumn img = new DataGridViewImageColumn();
-            img = (DataGridViewImageColumn)dataGridViewworker.Columns[8];
-            img.ImageLayout = DataGridViewImageCellLayout.Stretch;
-            dataGridViewworker.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewworker.RowTemplate.Height = 80;
-
             try
             {
+                //connect database
+                SqlConnection con = new SqlConnection(db);
+                string query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, Picture from WORKER";
+                SqlDataAdapter readData = new SqlDataAdapter(query, con);
 
+                //load data
 
+                DataTable data = new DataTable();
+                readData.Fill(data);
+                dataGridViewworker.DataSource = data;
+
+                //image column
+                DataGridViewImageColumn img = new DataGridViewImageColumn();
+                img = (DataGridViewImageColumn)dataGridViewworker.Columns[7];
+                img.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                dataGridViewworker.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridViewworker.RowTemplate.Height = 80;
             }
             catch (Exception)
             {

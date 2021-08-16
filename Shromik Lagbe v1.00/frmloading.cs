@@ -26,7 +26,7 @@ namespace Shromik_Lagbe_v1._00
         {
             startPoint += 1;
             progressBar1.Value = startPoint;
-            if (progressBar1.Value == 100)
+            if (progressBar1.Value == 10)
             {
                 try
                 {
@@ -36,7 +36,7 @@ namespace Shromik_Lagbe_v1._00
 
                     con.Open();
 
-                    int result = cmd.ExecuteNonQuery();
+                    double result = Convert.ToDouble(cmd.ExecuteScalar());
 
                     if (result > 0)
                     {

@@ -33,8 +33,6 @@ namespace Shromik_Lagbe_v1._00
             this.label12 = new System.Windows.Forms.Label();
             this.pregender = new System.Windows.Forms.Label();
             this.prename = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.assignid = new System.Windows.Forms.Label();
             this.btnphoto = new System.Windows.Forms.Button();
             this.paymentstatus = new System.Windows.Forms.ComboBox();
             this.servicearea = new System.Windows.Forms.ComboBox();
@@ -57,7 +55,6 @@ namespace Shromik_Lagbe_v1._00
             this.label5 = new System.Windows.Forms.Label();
             this.btnpreview = new System.Windows.Forms.Button();
             this.l_name = new System.Windows.Forms.TextBox();
-            this.preassignedworkerid = new System.Windows.Forms.Label();
             this.pnlpreview = new System.Windows.Forms.Panel();
             this.prepayment = new System.Windows.Forms.Label();
             this.pnlmainpreview = new System.Windows.Forms.Panel();
@@ -69,7 +66,6 @@ namespace Shromik_Lagbe_v1._00
             this.pnlclientinformation = new System.Windows.Forms.Panel();
             this.occupation = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.preworkerphoto)).BeginInit();
             this.pnlpreview.SuspendLayout();
             this.pnlmainpreview.SuspendLayout();
@@ -94,7 +90,7 @@ namespace Shromik_Lagbe_v1._00
             this.pregender.BackColor = System.Drawing.Color.Transparent;
             this.pregender.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pregender.ForeColor = System.Drawing.Color.White;
-            this.pregender.Location = new System.Drawing.Point(48, 144);
+            this.pregender.Location = new System.Drawing.Point(48, 161);
             this.pregender.Name = "pregender";
             this.pregender.Size = new System.Drawing.Size(60, 19);
             this.pregender.TabIndex = 40;
@@ -106,35 +102,11 @@ namespace Shromik_Lagbe_v1._00
             this.prename.BackColor = System.Drawing.Color.Transparent;
             this.prename.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prename.ForeColor = System.Drawing.Color.White;
-            this.prename.Location = new System.Drawing.Point(48, 109);
+            this.prename.Location = new System.Drawing.Point(48, 126);
             this.prename.Name = "prename";
             this.prename.Size = new System.Drawing.Size(51, 19);
             this.prename.TabIndex = 39;
             this.prename.Text = "Name:";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(114)))), ((int)(((byte)(142)))));
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown1.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.numericUpDown1.ForeColor = System.Drawing.Color.White;
-            this.numericUpDown1.Location = new System.Drawing.Point(71, 341);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(198, 22);
-            this.numericUpDown1.TabIndex = 20;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // assignid
-            // 
-            this.assignid.AutoSize = true;
-            this.assignid.BackColor = System.Drawing.Color.Transparent;
-            this.assignid.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assignid.ForeColor = System.Drawing.Color.White;
-            this.assignid.Location = new System.Drawing.Point(67, 310);
-            this.assignid.Name = "assignid";
-            this.assignid.Size = new System.Drawing.Size(117, 19);
-            this.assignid.TabIndex = 19;
-            this.assignid.Text = "Assign Client ID:";
             // 
             // btnphoto
             // 
@@ -142,7 +114,7 @@ namespace Shromik_Lagbe_v1._00
             this.btnphoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnphoto.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnphoto.ForeColor = System.Drawing.Color.White;
-            this.btnphoto.Location = new System.Drawing.Point(308, 332);
+            this.btnphoto.Location = new System.Drawing.Point(71, 343);
             this.btnphoto.Name = "btnphoto";
             this.btnphoto.Size = new System.Drawing.Size(118, 30);
             this.btnphoto.TabIndex = 17;
@@ -227,7 +199,7 @@ namespace Shromik_Lagbe_v1._00
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(304, 299);
+            this.label10.Location = new System.Drawing.Point(67, 310);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(122, 19);
             this.label10.TabIndex = 10;
@@ -239,7 +211,7 @@ namespace Shromik_Lagbe_v1._00
             this.preservice.BackColor = System.Drawing.Color.Transparent;
             this.preservice.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preservice.ForeColor = System.Drawing.Color.White;
-            this.preservice.Location = new System.Drawing.Point(48, 282);
+            this.preservice.Location = new System.Drawing.Point(48, 299);
             this.preservice.Name = "preservice";
             this.preservice.Size = new System.Drawing.Size(93, 19);
             this.preservice.TabIndex = 44;
@@ -251,7 +223,7 @@ namespace Shromik_Lagbe_v1._00
             this.prephone.BackColor = System.Drawing.Color.Transparent;
             this.prephone.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prephone.ForeColor = System.Drawing.Color.White;
-            this.prephone.Location = new System.Drawing.Point(48, 215);
+            this.prephone.Location = new System.Drawing.Point(48, 232);
             this.prephone.Name = "prephone";
             this.prephone.Size = new System.Drawing.Size(53, 19);
             this.prephone.TabIndex = 42;
@@ -263,7 +235,7 @@ namespace Shromik_Lagbe_v1._00
             this.preocc.BackColor = System.Drawing.Color.Transparent;
             this.preocc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preocc.ForeColor = System.Drawing.Color.White;
-            this.preocc.Location = new System.Drawing.Point(48, 179);
+            this.preocc.Location = new System.Drawing.Point(48, 196);
             this.preocc.Name = "preocc";
             this.preocc.Size = new System.Drawing.Size(87, 19);
             this.preocc.TabIndex = 41;
@@ -346,7 +318,7 @@ namespace Shromik_Lagbe_v1._00
             this.preadd.BackColor = System.Drawing.Color.Transparent;
             this.preadd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preadd.ForeColor = System.Drawing.Color.White;
-            this.preadd.Location = new System.Drawing.Point(48, 249);
+            this.preadd.Location = new System.Drawing.Point(48, 266);
             this.preadd.Name = "preadd";
             this.preadd.Size = new System.Drawing.Size(65, 19);
             this.preadd.TabIndex = 43;
@@ -428,21 +400,8 @@ namespace Shromik_Lagbe_v1._00
             this.l_name.TabIndex = 3;
             this.l_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // preassignedworkerid
-            // 
-            this.preassignedworkerid.AutoSize = true;
-            this.preassignedworkerid.BackColor = System.Drawing.Color.Transparent;
-            this.preassignedworkerid.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.preassignedworkerid.ForeColor = System.Drawing.Color.White;
-            this.preassignedworkerid.Location = new System.Drawing.Point(48, 345);
-            this.preassignedworkerid.Name = "preassignedworkerid";
-            this.preassignedworkerid.Size = new System.Drawing.Size(137, 19);
-            this.preassignedworkerid.TabIndex = 46;
-            this.preassignedworkerid.Text = "Assigned Worker Id:";
-            // 
             // pnlpreview
             // 
-            this.pnlpreview.Controls.Add(this.preassignedworkerid);
             this.pnlpreview.Controls.Add(this.prepayment);
             this.pnlpreview.Controls.Add(this.preservice);
             this.pnlpreview.Controls.Add(this.preadd);
@@ -463,7 +422,7 @@ namespace Shromik_Lagbe_v1._00
             this.prepayment.BackColor = System.Drawing.Color.Transparent;
             this.prepayment.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prepayment.ForeColor = System.Drawing.Color.White;
-            this.prepayment.Location = new System.Drawing.Point(48, 314);
+            this.prepayment.Location = new System.Drawing.Point(48, 331);
             this.prepayment.Name = "prepayment";
             this.prepayment.Size = new System.Drawing.Size(113, 19);
             this.prepayment.TabIndex = 45;
@@ -548,8 +507,6 @@ namespace Shromik_Lagbe_v1._00
             // 
             this.pnlclientinformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(68)))), ((int)(((byte)(101)))));
             this.pnlclientinformation.Controls.Add(this.occupation);
-            this.pnlclientinformation.Controls.Add(this.numericUpDown1);
-            this.pnlclientinformation.Controls.Add(this.assignid);
             this.pnlclientinformation.Controls.Add(this.btnphoto);
             this.pnlclientinformation.Controls.Add(this.paymentstatus);
             this.pnlclientinformation.Controls.Add(this.servicearea);
@@ -619,7 +576,6 @@ namespace Shromik_Lagbe_v1._00
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmaddworker";
             this.Text = "frmworker";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.preworkerphoto)).EndInit();
             this.pnlpreview.ResumeLayout(false);
             this.pnlpreview.PerformLayout();
@@ -637,8 +593,6 @@ namespace Shromik_Lagbe_v1._00
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label pregender;
         private System.Windows.Forms.Label prename;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label assignid;
         private System.Windows.Forms.Button btnphoto;
         private System.Windows.Forms.ComboBox paymentstatus;
         private System.Windows.Forms.ComboBox servicearea;
@@ -661,7 +615,6 @@ namespace Shromik_Lagbe_v1._00
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnpreview;
         private System.Windows.Forms.TextBox l_name;
-        private System.Windows.Forms.Label preassignedworkerid;
         private System.Windows.Forms.Panel pnlpreview;
         private System.Windows.Forms.Label prepayment;
         private System.Windows.Forms.Panel pnlmainpreview;

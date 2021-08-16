@@ -28,7 +28,7 @@ namespace Shromik_Lagbe_v1._00
                 //connect database
                 SqlConnection con = new SqlConnection(db);
                 con.Open();
-                string query = "SELECT FirstName, LastName, Gender, Email, PhoneNumber, FullAddress, ServiceArea, PaymentStatus,Picture FROM CLIENT WHERE ClientId = @id";
+                string query = "SELECT FirstName, LastName, WorkerId, Email, PhoneNumber, FullAddress, ServiceArea, PaymentStatus,Picture FROM CLIENT WHERE ClientId = @id";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@id", id);
 
@@ -38,7 +38,7 @@ namespace Shromik_Lagbe_v1._00
                 {
                     //current preview information
                     prename.Text = prename.Text + " " + da.GetValue(0).ToString() + " " + da.GetValue(1).ToString();
-                    pregender.Text = pregender.Text + " " + da.GetValue(2).ToString();
+                    preassignedwid.Text = preassignedwid.Text + " " + da.GetValue(2).ToString();
                     preemail.Text = preemail.Text + " " + da.GetValue(3).ToString();
                     prephone.Text = prephone.Text + " " + da.GetValue(4).ToString();
                     preadd.Text = preadd.Text + " " + da.GetValue(5).ToString();
@@ -54,7 +54,7 @@ namespace Shromik_Lagbe_v1._00
 
                     f_name.Text = da.GetValue(0).ToString();
                     l_name.Text = da.GetValue(1).ToString();
-                    gender.Text = da.GetValue(2).ToString();
+                    numericUpDown1.Value = Convert.ToInt32(da.GetValue(2).ToString());
                     email.Text = da.GetValue(3).ToString();
                     phone.Text = da.GetValue(4).ToString();
                     address.Text = da.GetValue(5).ToString();
@@ -86,7 +86,7 @@ namespace Shromik_Lagbe_v1._00
         private void reset()
         {
             prename.Text = "Name:";
-            pregender.Text = "Gender:";
+            preassignedwid.Text = "Assigned Worker Id: ";
             preemail.Text = "Email:";
             prephone.Text = "Phone:";
             preadd.Text = "Address:";
@@ -101,83 +101,24 @@ namespace Shromik_Lagbe_v1._00
 
             reset();
 
-            if (f_name.Text != "" || l_name.Text != "" || email.Text != "" || phone.Text != "" || address.Text != "" || servicearea.Text != "" || paymentstatus.Text != "")
+            if (f_name.Text != "" && l_name.Text != "" && email.Text != "" && phone.Text != "" && address.Text != "" && servicearea.Text != "" && paymentstatus.Text != "")
             {
-
-                //name
-                if (f_name.Text != "" || l_name.Text != "")
-                {
-                    prename.Text = prename.Text + " " + f_name.Text + " " + l_name.Text;
-                }
-                else
-                {
-                    MessageBox.Show("Please enter first name and last name.", "Empty Field", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                }
-                //gender
-                if (gender.Text != "")
-                {
-                    pregender.Text = pregender.Text + " " + gender.Text;
-                }
-                else
-                {
-                    MessageBox.Show("Please choose a gender.", "Empty Field", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                }
+                prename.Text = prename.Text + " " + f_name.Text + " " + l_name.Text;
+                prephone.Text = prephone.Text + " " + phone.Text;
+                preadd.Text = preadd.Text + " " + address.Text;
+                preservice.Text = preservice.Text + " " + servicearea.Text;
+                preassignedwid.Text = preassignedwid.Text + numericUpDown1.Value.ToString();
+                prepayment.Text = prepayment.Text + " " + paymentstatus.Text;
 
                 //email
-                if (email.Text != "")
+                bool em = email.Text.Contains('@');
+                if (em == true)
                 {
-                    bool em = email.Text.Contains('@');
-                    if (em == true)
-                    {
-                        preemail.Text = preemail.Text + " " + email.Text;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Please enter an valid email", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
+                    preemail.Text = preemail.Text + " " + email.Text;
                 }
                 else
                 {
-                    MessageBox.Show("Please enter an email address", "Empty Field", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
-                //phone
-                if (phone.Text != "")
-                {
-                    prephone.Text = prephone.Text + " " + phone.Text;
-                }
-                else
-                {
-                    MessageBox.Show("Please enter a phone number.", "Empty Field", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                }
-
-                //address
-                if (address.Text != "")
-                {
-                    preadd.Text = preadd.Text + " " + address.Text;
-                }
-                else
-                {
-                    MessageBox.Show("Please enter an local address.", "Empty Field", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                }
-                //service area
-                if (servicearea.Text != "")
-                {
-                    preservice.Text = preservice.Text + " " + servicearea.Text;
-                }
-                else
-                {
-                    MessageBox.Show("Please enter a service area.", "Empty Field", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                }
-
-                //payment status
-                if (paymentstatus.Text != "")
-                {
-                    prepayment.Text = prepayment.Text + " " + paymentstatus.Text;
-                }
-                else
-                {
-                    MessageBox.Show("Please enter a service area.", "Empty Field", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    MessageBox.Show("Please enter an valid email", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
             }
@@ -199,13 +140,13 @@ namespace Shromik_Lagbe_v1._00
                 try
                 {
                     SqlConnection con = new SqlConnection(db);
-                    string query = "UPDATE CLIENT SET FirstName = @fn, LastName = @ln, Gender = @gn, Email = @em, PhoneNumber = @ph, FullAddress = @fa, ServiceArea = @ar, PaymentStatus = @ps WHERE ClientId = @id";
+                    string query = "UPDATE CLIENT SET FirstName = @fn, LastName = @ln, WorkerId=@wi, Email = @em, PhoneNumber = @ph, FullAddress = @fa, ServiceArea = @ar, PaymentStatus = @ps WHERE ClientId = @id";
                     SqlCommand cmd = new SqlCommand(query, con);
 
 
                     cmd.Parameters.AddWithValue("@fn", f_name.Text);
                     cmd.Parameters.AddWithValue("@ln", l_name.Text);
-                    cmd.Parameters.AddWithValue("@gn", gender.Text);
+                    cmd.Parameters.AddWithValue("@wi", numericUpDown1.Value);
                     cmd.Parameters.AddWithValue("@em", email.Text);
                     cmd.Parameters.AddWithValue("@ph", phone.Text);
                     cmd.Parameters.AddWithValue("@fa", address.Text);

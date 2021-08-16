@@ -147,19 +147,19 @@ namespace Shromik_Lagbe_v1._00
         {
             if (comboBox1.Text == "All Area" && comboBox2.Text == "Occupation")
             {
-                query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, ClientId as 'Assigned C.ID', Picture from WORKER";
+                query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, Picture from WORKER";
             }
             else if (comboBox1.Text != "All Area" && comboBox2.Text == "Occupation")
             {
-                query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, ClientId as 'Assigned C.ID', Picture from WORKER WHERE ServiceArea LIKE '" + comboBox1.SelectedItem + "%'";
+                query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, Picture from WORKER WHERE ServiceArea LIKE '" + comboBox1.SelectedItem + "%'";
             }
             else if (comboBox1.Text == "All Area" && comboBox2.Text != "Occupation")
             {
-                query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, ClientId as 'Assigned C.ID', Picture from WORKER WHERE Occupation LIKE '" + comboBox2.SelectedItem + "%'";
+                query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, Picture from WORKER WHERE Occupation LIKE '" + comboBox2.SelectedItem + "%'";
             }
             else if(comboBox1.Text != "All Area" && comboBox2.Text != "Occupation")
             {
-                query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, ClientId as 'Assigned C.ID', Picture from WORKER WHERE ServiceArea LIKE '" + comboBox1.SelectedItem + "%' AND Occupation LIKE '" + comboBox2.SelectedItem + "%'";
+                query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, Picture from WORKER WHERE ServiceArea LIKE '" + comboBox1.SelectedItem + "%' AND Occupation LIKE '" + comboBox2.SelectedItem + "%'";
             }
         }
 
@@ -181,7 +181,7 @@ namespace Shromik_Lagbe_v1._00
 
                 //image column
                 DataGridViewImageColumn img = new DataGridViewImageColumn();
-                img = (DataGridViewImageColumn)dataGridViewworker.Columns[8];
+                img = (DataGridViewImageColumn)dataGridViewworker.Columns[7];
                 img.ImageLayout = DataGridViewImageCellLayout.Stretch;
                 dataGridViewworker.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridViewworker.RowTemplate.Height = 80;
@@ -212,7 +212,7 @@ namespace Shromik_Lagbe_v1._00
 
                 //image column
                 DataGridViewImageColumn img = new DataGridViewImageColumn();
-                img = (DataGridViewImageColumn)dataGridViewworker.Columns[8];
+                img = (DataGridViewImageColumn)dataGridViewworker.Columns[7];
                 img.ImageLayout = DataGridViewImageCellLayout.Stretch;
                 dataGridViewworker.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridViewworker.RowTemplate.Height = 80;
@@ -247,7 +247,7 @@ namespace Shromik_Lagbe_v1._00
             {
                 SqlConnection con = new SqlConnection(db);
 
-                query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, ClientId as 'Assigned C.ID', Picture from WORKER WHERE FirstName LIKE '" + searchbox.Text + "%' OR LastName LIKE '" + searchbox.Text + "%'";
+                query = "select WorkerId As ID, FirstName +' '+ Lastname as 'Full Name', Gender, Occupation, PhoneNumber, FullAddress, ServiceArea, Picture from WORKER WHERE FirstName LIKE '" + searchbox.Text + "%' OR LastName LIKE '" + searchbox.Text + "%'";
 
                 SqlDataAdapter readData = new SqlDataAdapter(query, con);
 
@@ -259,7 +259,7 @@ namespace Shromik_Lagbe_v1._00
 
                 //image column
                 DataGridViewImageColumn img = new DataGridViewImageColumn();
-                img = (DataGridViewImageColumn)dataGridViewworker.Columns[8];
+                img = (DataGridViewImageColumn)dataGridViewworker.Columns[7];
                 img.ImageLayout = DataGridViewImageCellLayout.Stretch;
                 dataGridViewworker.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridViewworker.RowTemplate.Height = 80;

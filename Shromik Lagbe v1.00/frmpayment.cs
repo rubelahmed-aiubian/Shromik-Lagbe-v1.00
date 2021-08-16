@@ -16,10 +16,36 @@ namespace Shromik_Lagbe_v1._00
     {
         string db = ConfigurationManager.ConnectionStrings["shromik"].ConnectionString;
 
-        double costperhour = 500;
+        double costperhour;
         public frmpayment()
         {
             InitializeComponent();
+            getcostperhour();
+        }
+
+        //cost per hour
+        private void getcostperhour()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(db);
+                string query = "SELECT CostPerHour FROM LOGIN";
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                SqlDataReader da = cmd.ExecuteReader();
+
+                while (da.Read())
+                {
+                    costperhour = Convert.ToDouble(da.GetValue(0));
+                }
+
+
+                con.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something is not right.", "Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmpayment_Load(object sender, EventArgs e)

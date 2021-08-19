@@ -21,6 +21,7 @@ namespace Shromik_Lagbe_v1._00
         public frmaddworker()
         {
             InitializeComponent();
+            workernumbercheck();
         }
 
         //check worker count
@@ -180,13 +181,13 @@ namespace Shromik_Lagbe_v1._00
                     int result = cmd.ExecuteNonQuery();
                     if (result > 0)
                     {
-                        MessageBox.Show("Client Added Successfully.", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Worker Added Successfully.", "Insert Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         reset();
 
                     }
                     else
                     {
-                        MessageBox.Show("Client Not Added Successfully.", "Insert Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Worker Not Added Successfully.", "Insert Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
 

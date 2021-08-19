@@ -245,6 +245,7 @@ namespace Shromik_Lagbe_v1._00
 
                 con.Open();
                 int res = cmd.ExecuteNonQuery();
+                con.Close();
                 if (res > 0)
                 {
                     lblwc.Text = numericUpDown3.Value.ToString();
@@ -254,7 +255,6 @@ namespace Shromik_Lagbe_v1._00
                 {
                     MessageBox.Show("WC Not Updated", "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                con.Close();
             }
             else
             {
